@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -137,6 +138,18 @@ AudioListener:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebfeea3195e90f6429d903da23458bae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1858950383}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -184,7 +197,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &619116418
 GameObject:
@@ -196,7 +209,7 @@ GameObject:
   - component: {fileID: 619116420}
   - component: {fileID: 619116419}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Builder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -216,10 +229,10 @@ MonoBehaviour:
   fall01: {fileID: 1073109241732342, guid: b6e9ee975a2469446a36e193cec15293, type: 2}
   lake01: {fileID: 1404203999020632, guid: e84f2e77427d095469f369347e344f2d, type: 2}
   poison01: {fileID: 1967812597318398, guid: 42ea95b889b73374ca4eb556ede0e1bf, type: 2}
-  breaking01: {fileID: 0}
-  gate01: {fileID: 0}
+  breaking01: {fileID: 1631080926968656, guid: 2abc02f018fa05649b6f10cd8a7b964e, type: 2}
+  gate01: {fileID: 1543872431654658, guid: 2df7269330a762548be876350043825c, type: 2}
   text: {fileID: 4900000, guid: d8620db833b1147458243c4b5d7df02f, type: 3}
-  nextstage: {fileID: 0}
+  nextstage: {fileID: 4900000, guid: d8620db833b1147458243c4b5d7df02f, type: 3}
 --- !u!4 &619116420
 Transform:
   m_ObjectHideFlags: 0
@@ -231,7 +244,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &677876812
 GameObject:
@@ -357,9 +370,9 @@ RectTransform:
   m_Father: {fileID: 677876816}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 460, y: 250}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 80, y: -15}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1474257551
@@ -477,7 +490,7 @@ GameObject:
   - component: {fileID: 1858950387}
   m_Layer: 0
   m_Name: player
-  m_TagString: Untagged
+  m_TagString: Trejar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -533,12 +546,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1858950383}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1, y: -1, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1858950386
 MonoBehaviour:

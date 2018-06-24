@@ -11,6 +11,7 @@ public class Player : MonoBehaviour {
     private bool heel = false, poison = false;
     public long HP = 100;
     public Text text;
+    public long HPmax = 100;
     float onetime = 0;
 	// Use this for initialization
 	void Start () {
@@ -26,6 +27,10 @@ public class Player : MonoBehaviour {
             if (heel)
             {
                 HP+=3;
+                if (HP > HPmax)
+                {
+                    HP = HPmax;
+                }
             }
             if (poison)
             {
