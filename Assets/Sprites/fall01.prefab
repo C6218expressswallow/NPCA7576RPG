@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114317333731040252}
   m_Layer: 0
   m_Name: fall01
-  m_TagString: Untagged
+  m_TagString: tikei
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -79,6 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  target: {fileID: 0}
 --- !u!212 &212141771774939116
 SpriteRenderer:
   m_ObjectHideFlags: 1

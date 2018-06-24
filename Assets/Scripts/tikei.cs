@@ -9,11 +9,15 @@ public class tikei : MonoBehaviour {
     //　１　　　壁（破壊可能）
     //　２　　　回復系地形
     //　３　　　ダメージ系地形
-    public void breaking()
+    public GameObject target;
+    public int breaking()
     {
         if (type == 1)
         {
+            Debug.Log("collider!");
+            Instantiate (target, this.transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }
+        return type;
     }
 }
