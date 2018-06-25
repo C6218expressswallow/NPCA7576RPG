@@ -22,7 +22,7 @@ public class goal : MonoBehaviour {
         builder = GameObject.FindGameObjectWithTag("builder");
         built = builder.GetComponent<build>();
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Trejar")
         {
