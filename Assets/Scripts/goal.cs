@@ -15,6 +15,10 @@ public class goal : MonoBehaviour {
         logiventor = GameObject.FindGameObjectWithTag("event");
         logivent = logiventor.GetComponent<eventmanager>();
         player = GameObject.FindGameObjectWithTag("Trejar");
+        if (player == null)
+        {
+            Debug.Log("error!");
+        }
         builder = GameObject.FindGameObjectWithTag("builder");
         built = builder.GetComponent<build>();
     }
@@ -24,7 +28,7 @@ public class goal : MonoBehaviour {
         {
             Debug.Log("hit the player!");
             logivent.Log("go to next floor?");
-            ans = logivent.Poll();
+            ans = logivent.Which();
             if (ans == 1)
             {
                GameObject[] game= GameObject.FindGameObjectsWithTag("tikei");

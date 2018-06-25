@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4012984114266812}
   - component: {fileID: 212299165825342304}
   - component: {fileID: 114975694681808974}
-  - component: {fileID: 61398697781029350}
+  - component: {fileID: 61036490520456388}
   m_Layer: 0
   m_Name: gate
   m_TagString: tikei
@@ -42,7 +42,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61398697781029350
+--- !u!61 &61036490520456388
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
