@@ -22,12 +22,19 @@ public class goal : MonoBehaviour {
         builder = GameObject.FindGameObjectWithTag("builder");
         built = builder.GetComponent<build>();
     }
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Trejar")
         {
             Debug.Log("hit the player!");
             logivent.Log("go to next floor?");
+        }
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Trejar")
+        {
+            
             ans = logivent.Which();
             if (ans == 1)
             {
