@@ -20,7 +20,7 @@ public class eventmanager : MonoBehaviour {
     }
     public int Which(string a="Yes",string b="No")
     {
-        flug = 1;
+        flug = 0;
         return flug;
     }
 }
