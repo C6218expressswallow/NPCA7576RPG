@@ -7,11 +7,22 @@ public class eventmanager : MonoBehaviour {
     public Text text;
     public Image image;
     public int flug = 0;
+    private bool whichflug;
 	// Use this for initialization
 	void Start () {
         text.gameObject.SetActive(false);
         image.gameObject.SetActive(false);
 	}
+    private void Update()
+    {
+        if (whichflug)
+        {
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+
+            }
+        }
+    }
     public void Log(string s)
     {
         text.gameObject.SetActive(true);
