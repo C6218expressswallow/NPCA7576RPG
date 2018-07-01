@@ -7,7 +7,7 @@ public class eventmanager : MonoBehaviour {
     public Text text;
     public Image image;
     public int flug = 0;
-    private bool whichflug;
+    private bool whichflug = false;
 	// Use this for initialization
 	void Start () {
         text.gameObject.SetActive(false);
@@ -33,5 +33,11 @@ public class eventmanager : MonoBehaviour {
     {
         flug = 0;
         return flug;
+    }
+    public void Erase()
+    {
+        text.gameObject.SetActive(false);
+        image.gameObject.SetActive(false);
+        whichflug = false;
     }
 }
