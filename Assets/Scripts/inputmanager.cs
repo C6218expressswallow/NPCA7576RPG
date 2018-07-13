@@ -6,11 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class inputmanager : MonoBehaviour {
     private InputField inputField;
-	// Use this for initialization
+	//初期設定
 	void Start () {
         inputField = GetComponent<InputField>();
         InitInputField();
 	}
+    //インプットフィールドから文字をもらう
     public void InputLogger()
     {
 
@@ -22,9 +23,8 @@ public class inputmanager : MonoBehaviour {
         InitInputField();
     }
 
-    // Update is called once per frame
+    // インプットフィールド初期化
     void InitInputField () {
         inputField.text = "";
         inputField.ActivateInputField();
 	}
-}

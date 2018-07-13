@@ -1,0 +1,11 @@
+eventmanagerクラス
+・whichflug変数......矢印キーで選択するタイプの選択ログを表示するかどうか　true or false
+・text変数......通常のログに表示するtext text.text="text"といった風に使う
+・flug変数...プレーヤーからの選択の結果を格納する
+・image変数…ログの背景
+・Which関数...選択ログを表示する
+・WhichReturn関数...flug変数を返す（変更がない場合は0を返す）
+・Start関数...すべてのログを隠す
+・Update関数…選択ログのチェックなど
+・Log関数...引数のstringをログとして表示
+・Erase関数...ログを消す
