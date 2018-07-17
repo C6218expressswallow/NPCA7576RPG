@@ -3,23 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class build : MonoBehaviour {
-    public GameObject fall01;
-    public GameObject lake01;
-    public GameObject poison01;
-    public GameObject breaking01;
-    public GameObject gate01;
-    Dictionary<char, GameObject> map;
-    public TextAsset text;
-    public TextAsset nextstage;
+    public GameObject fall01;//壁オブジェクト１
+    public GameObject lake01;//回復オブジェクト1
+    public GameObject poison01;//毒沼オブジェクト１
+    public GameObject breaking01;//破壊可能オブジェクト１
+    public GameObject gate01;//ゴール１
+    Dictionary<char, GameObject> map;//オブジェクトと文字列を関連付けるための辞書
+    public TextAsset text;//初期マップ
+    public TextAsset nextstage;//ゴールに渡す次のステージ
 	void Start () {
         map = new Dictionary<char, GameObject>()
         {
             {'f',fall01 },//'f'を壁オブジェクトに関連付ける
-            {'l',lake01 },
-            {'\n',null },
-            {'p',poison01 },
-            {'b',breaking01 },
-            {'g',gate01 },
+            {'l',lake01 },//'l'を回復オブジェクトに関連付ける
+            {'\n',null },//'\n'(改行文字)を改行に関連付ける
+            {'p',poison01 },//'p'を毒沼オブジェクトに関連付ける
+            {'b',breaking01 },//'b'を破壊可能オブジェクトに関連付ける
+            {'g',gate01 },//'g'をゴールに関連付ける
         };
         Stagebuild(text.text);
     }

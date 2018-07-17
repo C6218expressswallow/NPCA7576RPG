@@ -4,13 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class inputmanager : MonoBehaviour {
+public class inputmanager : MonoBehaviour
+{
     private InputField inputField;
-	//初期設定
-	void Start () {
+    //初期設定
+    void Start()
+    {
         inputField = GetComponent<InputField>();
         InitInputField();
-	}
+    }
     //インプットフィールドから文字をもらう
     public void InputLogger()
     {
@@ -24,7 +26,9 @@ public class inputmanager : MonoBehaviour {
     }
 
     // インプットフィールド初期化
-    void InitInputField () {
+    void InitInputField()
+    {
         inputField.text = "";
         inputField.ActivateInputField();
-	}
+    }
+}

@@ -21,7 +21,7 @@ public class goal : MonoBehaviour {
         }
         builder = GameObject.FindGameObjectWithTag("builder");
         built = builder.GetComponent<build>();
-    }
+    }//参照するスクリプトを開く
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Trejar")
@@ -29,7 +29,7 @@ public class goal : MonoBehaviour {
             Debug.Log("hit the player!");
             logivent.Log("go to next floor?");
         }
-    }
+    }//プレイヤーが触れたら、ログを出す。
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Trejar")
@@ -48,5 +48,5 @@ public class goal : MonoBehaviour {
                 built.Stagebuild(newstage.text);
             }
         }
-    }
+    }//プレイヤーが触れている間、選択ログを出し続ける
 }
