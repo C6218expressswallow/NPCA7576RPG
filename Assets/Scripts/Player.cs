@@ -63,19 +63,19 @@ public class Player : MonoBehaviour {
                 speed = begspeed;//スピードを元に戻す
             }
         }
-        if (Input.GetKey(KeyCode.UpArrow)||Input.GetKey(KeyCode.U))//上へ移動
+        if (Input.GetKey(KeyCode.UpArrow)||Input.GetKey(KeyCode.W))//上へ移動
         {
             transform.position += new Vector3(0, speed, 0);
         }
-        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.D))//下へ移動
+        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))//下へ移動
         {
             transform.position += new Vector3(0, -speed, 0);
         }
-        if (Input.GetKey(KeyCode.RightArrow)||Input.GetKey(KeyCode.R))//右へ移動
+        if (Input.GetKey(KeyCode.RightArrow)||Input.GetKey(KeyCode.D))//右へ移動
         {
             transform.position += new Vector3(speed, 0, 0);
         }
-        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.L))//左へ移動
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))//左へ移動
         {
             transform.position += new Vector3(-speed, 0, 0);
         }
