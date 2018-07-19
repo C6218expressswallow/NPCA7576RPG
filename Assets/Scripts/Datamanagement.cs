@@ -3,14 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Datamanagement : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public int hitpoint;
+    public int level;
+    public bool flug1;
+    public void Saver(int hp,int Lv)
+    {
+        hitpoint = hp;
+        level = Lv;
+    }
 }
