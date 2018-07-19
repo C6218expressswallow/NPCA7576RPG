@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Save : MonoBehaviour {
+    private int leveldata;
+    private int levelhash;
+    private int hpdata;
+    private int hphash;
     public Datamanagement datamanagement;
 	public bool Load(int num)//num番目のセーブデータを読み込む
     {
