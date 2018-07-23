@@ -1047,10 +1047,10 @@ MonoBehaviour:
     locked: 0
     parentImg: {fileID: 11400000}
   finalImg: {fileID: 0}
-  _gridSpacing: 20
+  _gridSpacing: 18
   gridOffsetY: 0
   gridOffsetX: 0
   selectedColor: {r: 0.13333334, g: 1, b: 0.94117653, a: 1}
-  tool: 1
+  tool: 0
   gridBGIndex: 0
   dirty: 1
