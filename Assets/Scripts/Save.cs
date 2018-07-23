@@ -31,6 +31,11 @@ public class Save : MonoBehaviour {
                     PlayerPrefs.DeleteAll();
                     return false;
                 }
+                if (leveldata % 101 != 0)
+                {
+                    PlayerPrefs.DeleteAll();
+                }
+                leveldata = leveldata % 101;
                 datamanagement.Saver(hpdata, leveldata);
             }
         }
@@ -48,8 +53,8 @@ public class Save : MonoBehaviour {
             PlayerPrefs.DeleteKey("level" + num);
             PlayerPrefs.DeleteKey("levelh" + num);
         }
-        PlayerPrefs.SetInt("hp" + num, datamanagement.hitpoint);
-        PlayerPrefs.SetInt("hph" + num, (datamanagement.hitpoint % hpshash));
+        PlayerPrefs.SetInt("hp" + num, (datamanagement.hitpoint)*101);
+        PlayerPrefs.SetInt("hph" + num, ((datamanagement.hitpoint*101) % hpshash));
         PlayerPrefs.SetInt("level" + num, datamanagement.level);
         PlayerPrefs.SetInt("levelh" + num, (datamanagement.level % levelshash));
     }
