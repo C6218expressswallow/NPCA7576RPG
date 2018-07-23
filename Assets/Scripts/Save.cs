@@ -23,10 +23,12 @@ public class Save : MonoBehaviour {
                 hphash = PlayerPrefs.GetInt("hph" + num);
                 if (leveldata % levelshash != levelhash)
                 {
+                    PlayerPrefs.DeleteAll();//もし改変されていたらすべてのデータを削除する
                     return false;
                 }
                 if (hpdata % hpshash != hphash)
                 {
+                    PlayerPrefs.DeleteAll();
                     return false;
                 }
                 datamanagement.Saver(hpdata, leveldata);
