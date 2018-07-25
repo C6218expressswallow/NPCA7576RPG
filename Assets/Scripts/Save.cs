@@ -27,25 +27,26 @@ public class Save : MonoBehaviour {
                     if (leveldata % levelshash != levelhash)
                     {
                         PlayerPrefs.DeleteAll();//もし改変されていたらすべてのデータを削除する
-                        return "save data has breaked!";
+                        return "save data had breaked!";
                     }
                     if (hpdata % hpshash != hphash)
                     {
                         PlayerPrefs.DeleteAll();
-                        return "save data has breaked!";
+                        return "save data had breaked!";
                     }
                     if (leveldata % 101 != 0)
                     {
                         PlayerPrefs.DeleteAll();
-                        return "save data has breaked!";
+                        return "save data had breaked!";
                     }
                     leveldata = leveldata % 101;
                     datamanagement.Saver(hpdata, leveldata);
                     named = PlayerPrefs.GetString("name" + num);
+                    return named;
                 }
             }
         }
-        return "nothing";//データがない場合はfalseを返す
+        return "save data is nothing";//データがない場合はfalseを返す
     }
     public void Saved(int num,string names)
     {
