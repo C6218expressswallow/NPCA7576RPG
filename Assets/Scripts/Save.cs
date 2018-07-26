@@ -10,6 +10,7 @@ public class Save : MonoBehaviour {
     private int hphash;//ハッシュ
     private int levelshash = 11;//ハッシュキーは11
     private int hpshash = 23;
+    private int levelhashplus = 101;//強化
     public Datamanagement datamanagement;
     public string named;
 	public string Load(int num)//num番目のセーブデータを読み込む
@@ -34,12 +35,12 @@ public class Save : MonoBehaviour {
                         PlayerPrefs.DeleteAll();
                         return "save data had breaked!";
                     }
-                    if (leveldata % 101 != 0)
+                    if (leveldata % levelhashplus != 0)
                     {
                         PlayerPrefs.DeleteAll();
                         return "save data had breaked!";
                     }
-                    leveldata = leveldata % 101;
+                    leveldata = leveldata % levelhashplus;
                     datamanagement.Saver(hpdata, leveldata);
                     named = PlayerPrefs.GetString("name" + num);
                     return named;
@@ -65,8 +66,9 @@ public class Save : MonoBehaviour {
             PlayerPrefs.DeleteKey("levelh" + num);
         }
         PlayerPrefs.SetString("name" + num, names);
-        PlayerPrefs.SetInt("hp" + num, (datamanagement.hitpoint)*101);
-        PlayerPrefs.SetInt("hph" + num, ((datamanagement.hitpoint*101) % hpshash));
+        PlayerPrefs.SetInt("hp" + num, (datamanagement.hitpoint)*levelhashplus);
+        int hphaser = (datamanagement.hitpoint * levelhashplus) % hpshash;
+        PlayerPrefs.SetInt("hph" + num, hphaser);
         PlayerPrefs.SetInt("level" + num, (datamanagement.level));
         PlayerPrefs.SetInt("levelh" + num, ((datamanagement.level) % levelshash));
     }
