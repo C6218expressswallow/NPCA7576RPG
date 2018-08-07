@@ -45,3 +45,27 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: "\u80CC\u666F"
+    uniqueID: 2701264887
+    locked: 0
+  - name: "\u59CB\u3081\u304B\u3089"
+    uniqueID: 3119702403
+    locked: 0
+  - name: "\u7D9A\u304D\u304B\u3089"
+    uniqueID: 2479748593
+    locked: 0
+  - name: "\u984C\u540D\uFF11"
+    uniqueID: 199598383
+    locked: 0
+  - name: "\u984C\u540D\uFF12"
+    uniqueID: 3930879905
+    locked: 0
+  - name: "\u984C\u540D\uFF13"
+    uniqueID: 3833751597
+    locked: 0
+  - name: "\u984C\u540D\uFF14"
+    uniqueID: 874120795
+    locked: 0
+  - name: "\u984C\u540D\uFF15"
+    uniqueID: 271437703
+    locked: 0
