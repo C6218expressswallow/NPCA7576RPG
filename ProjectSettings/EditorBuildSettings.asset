@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/buttle.unity
     guid: ce1a04857370ac848a4e4d46ecb4a560
+  - enabled: 1
+    path: Assets/Scenes/ChoiceData.unity
+    guid: 3c49352cc7be6964899b08b5d662069c
   m_configObjects: {}
