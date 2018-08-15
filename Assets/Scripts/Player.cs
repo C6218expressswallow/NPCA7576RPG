@@ -10,14 +10,14 @@ public class Player : MonoBehaviour {
     private float begspeed;
     private bool heel = false, poison = false;
     public long HP = 100;
-    public Text text;
+    public Image image;
     public long HPmax = 100;
     float onetime = 0;
 	// Use this for initialization
 	void Start () {
         begspeed = speed;
 	}
-    
+
     // Update is called once per frame
     void FixedUpdate () {
         onetime += Time.deltaTime;//経過時間の取得
@@ -35,26 +35,26 @@ public class Player : MonoBehaviour {
             if (poison)
             {
                 HP-=5;//ダメージ
-               
+
             }
             if (HP < 10)
             {
-                text.color = Color.red;//HPを赤にする
+                image.color = Color.red;//HPを赤にする
             }
             else if (HP < 20)
             {
-                text.color = Color.yellow;//HPを黄色にする
+                image.color = Color.yellow;//HPを黄色にする
             }
             else
             {
-                text.color = Color.green;//HPを青にする
+                image.color = Color.green;//HPを青にする
             }
         }
         if (HP <= 0)
         {
             SceneManager.LoadScene("game over");//ゲームオーバー処理
         }
-        text.text = "HP:" + HP;
+        image.fillAmount = (float)HP / (float)HPmax;//ゲージを制御
         if (stoptimer >= 0)
         {
             stoptimer -= Time.deltaTime;
