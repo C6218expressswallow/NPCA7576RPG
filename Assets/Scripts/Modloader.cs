@@ -5,6 +5,10 @@ using System.IO;
 
 public class Modloader : MonoBehaviour {
     string path;
+    public FileInfo[] stageinfo;
+    public FileInfo[] iteminfo;
+    public string[] stages;
+    public string[] items;
 	// Use this for initialization
 	void Start () {
         path = Application.dataPath + "/../../Stage";
@@ -13,17 +17,23 @@ public class Modloader : MonoBehaviour {
             Directory.CreateDirectory(path);
         }
         DirectoryInfo dir = new DirectoryInfo(path);
-        FileInfo[] info = dir.GetFiles("*.txt");
+        stageinfo = dir.GetFiles("*.txt");
         Debug.Log("load data!");
-        foreach(FileInfo f in info)
+        foreach(FileInfo f in stageinfo)
         {
-            Debug.Log(f.Name);
+            StreamReader strr = new StreamReader(f.OpenRead());
+            stages.CopyTo(stages = new string[stages.Length + 1], 0);
+            stages[stages.Length - 1] = strr.ReadToEnd();
+            Debug.Log(stages[stages.Length - 1]);
         }
         Debug.Log("have loaded data!");
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+        path = Application.dataPath + "/../../Item";
+        if (!Directory.Exists(path))
+        {
+            Directory.CreateDirectory(path);
+        }
+        dir = new DirectoryInfo(path);
+        iteminfo = dir.GetFiles("*.txt");
+        Debug.Log("road items!");
 	}
 }
