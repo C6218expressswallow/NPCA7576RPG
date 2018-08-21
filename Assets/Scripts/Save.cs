@@ -4,9 +4,9 @@ using UnityEngine;
 
 
 public class Save : MonoBehaviour {
-    private int leveldata;//レベルデータ
+    public int leveldata;//レベルデータ
     private int levelhash;//ハッシュ
-    private int hpdata;//HP
+    public int hpdata;//HP
     private int hphash;//ハッシュ
     private int levelshash = 107;//ハッシュキーは107
     private int hpshash = 23;
