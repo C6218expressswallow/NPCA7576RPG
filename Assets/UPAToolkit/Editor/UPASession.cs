@@ -166,9 +166,11 @@ public class UPASession {
 		}
 		
 		texImp.filterMode = FilterMode.Point;
-		texImp.textureFormat = TextureImporterFormat.AutomaticTruecolor;
-		
-		AssetDatabase.ImportAsset(path); 
+#pragma warning disable CS0618 // 型またはメンバーが古い形式です
+        texImp.textureFormat = TextureImporterFormat.AutomaticTruecolor;
+#pragma warning restore CS0618 // 型またはメンバーが古い形式です
+
+        AssetDatabase.ImportAsset(path); 
 		
 		return true;
 	}
