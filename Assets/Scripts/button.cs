@@ -18,4 +18,8 @@ public class button : MonoBehaviour {
     {
         SceneManager.LoadScene("manu");
     }
+    public void ButtonPush()
+    {
+        SceneManager.LoadScene("ChoiceData");
+    }
 }

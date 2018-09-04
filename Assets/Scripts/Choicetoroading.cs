@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class Choicetoroading : MonoBehaviour {
     public Text[] texts;
     public GameObject obj;
     public Save save;
+    public Text back;
     int choice = 0;
     public int[] hp = new int[10];
     public int[] level = new int[10];
@@ -29,15 +31,25 @@ public class Choicetoroading : MonoBehaviour {
     }
     private void Update()
     {
-        for(int i = 0; i < texts.Length;i++)
+        for(int i = 0; i < (texts.Length+1);i++)
         {
             if (choice == i)
             {
-                texts[i].color = Color.green;
+                if (i == texts.Length)
+                {
+                    back.color = Color.green;
+                }
+                else
+                {
+                    texts[i].color = Color.green;
+                }
             }
             else
             {
-                texts[i].color = Color.yellow;
+                if (i == texts.Length)
+                { back.color = Color.yellow; }
+                else
+                { texts[i].color = Color.yellow; }
             }
         }
         if (Input.GetKeyDown(KeyCode.UpArrow))
@@ -49,9 +61,23 @@ public class Choicetoroading : MonoBehaviour {
         }
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            if (choice != (texts.Length - 1))
+            if (choice != (texts.Length))
             {
                 choice++;
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (choice < 10)//戻るボタンを押していないとき
+            {
+                if (nowactives[choice])
+                {
+
+                }
+            }
+            else
+            {
+                SceneManager.LoadScene("start");
             }
         }
     }
