@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdf7ac659c01b8a43a74747fb4e57788, type: 3}
+  m_Name: "\u4E3B\u4EBA\u516C\u30C7\u30FC\u30BF"
+  m_EditorClassIdentifier: 
+  hp: 0
+  condition1: 0
+  condition2: 0
+  condition3: 0
+  condition4: 0
+  mp: 0
